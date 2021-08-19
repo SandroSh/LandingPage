@@ -1,0 +1,68 @@
+@import 'media-queries';
+@import 'colors';
+
+
+
+
+#special{
+    background: rgb(0, 0, 0);
+    min-height: 100vh;
+    .heading{
+       
+        h1{
+           
+            font-weight: 900;
+            @include heading();
+            color:rgb(255, 255, 255);
+        }
+        p{
+            color:#ccc;
+            font-weight: 700;
+            font-size:1.2rem;
+        }
+    }
+    .card-container{
+        width:95%;
+        margin:7rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        .card{
+            height:40rem;
+            width:30rem;
+            background: rgb(243, 240, 240);
+            padding: 1rem;
+            text-align: center;
+
+            margin:2rem;
+            img{
+                height:50%;
+                width:100%;
+                object-fit: cover;
+            }
+            p{  
+                font-size: 1.4rem;
+                margin:2rem 0;
+        
+            }
+
+            button{
+                @include button;
+                height:3.5rem;
+                width:14rem;
+                background:$hover-color;
+                color:white;
+
+                &:hover{
+                    color:rgb(15, 15, 15);
+                }
+            }
+            &:hover{
+                transform: scale(.9);
+            }
+        }
+        
+    }
+}

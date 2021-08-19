@@ -1,0 +1,91 @@
+@import 'media-queries';
+#home{
+    background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,.7));
+    position: relative;
+
+
+    
+    .content{
+        margin-left: 20px;
+        h1{
+            font-size: 5rem;
+            font-family:sans-serif;
+            font-weight: bolder;
+            text-shadow: .1rem .1rem .3rem #333;
+            color:$hover-color;   
+           
+        }
+        h2{
+            font-size: 3.5rem;
+            font-family:cursive;
+            font-weight: bolder;
+            text-shadow: .1rem .1rem .3rem #333;
+            color:white;
+            margin:1rem 0;
+           
+        }
+        p{
+            font-size: 1.7rem;
+            color:#ccc;
+         
+
+        }
+        button{
+            @include button();
+            height: 4rem;
+            width: 14rem;
+            background: #fff;
+
+
+
+        }
+    }
+
+   
+    .video-container{
+        position: absolute;
+        top:0;
+        left:-8px;
+        height: 100%;
+        width: 100%;
+        z-index: -10;
+        
+        .vid{
+            
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display:none;
+        }
+        .vid1{
+            display: block;
+
+        }
+    }
+    .controls{
+        position: absolute;
+        bottom: 14%; left: 14px;
+        transform: translateX(-50%);
+        
+        display:flex;
+        justify-content: center;
+        left:50%;
+
+
+        
+        .dots{
+            height: 2rem;
+            width: 2rem;
+            cursor: pointer;
+            background: white;
+            margin: 0 1rem;
+            border-radius: 0.7rem;
+            
+           
+           &:hover{
+               background-color:$hover-color;
+           }
+        }
+    }
+}

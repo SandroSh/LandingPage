@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'media-queries';
+
+
+
+
+#about{
+    .heading{
+        h1{
+            @include heading();
+            color:#000;
+            padding-top: 0;
+        }
+    }
+    .content{
+
+        margin:4rem auto;
+        p{
+            font-size:2rem;
+        }
+        button{
+            @include button();
+            height: 4rem;
+            width:14rem;
+            background: #333;
+            color:white;
+            &:hover{
+                background-color:$hover-color;
+            }
+        }
+    }
+    .image{
+        img{
+            width:67vw;
+        }
+    }
+}
